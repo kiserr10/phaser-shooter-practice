@@ -16,7 +16,7 @@ const config = {
     }
 };
 
-let game = new Phaser.Game(config);
+const game = new Phaser.Game(config);
 
 //initialize variables//
 
@@ -32,15 +32,15 @@ function preload(){
 
 function create(){
     //scrolling background//
-    starfield = game;
+    this.add.image(0, 0, 800, 600, 'starfield');
     //the hero//
-    player = game.add.sprite(400, 500, 'spaceship');
-    player.anchor.setTo(0.5, 0.5);
+    // player = game.add.sprite(400, 500, 'spaceship');
+    // player.anchor.setTo(0.5, 0.5);
 }
 
 function update(){
     //Scroll the background//
-    starfield.tilePosition.y =+ 2;
+    // starfield.tilePosition.y =+ 2;
 }
 function render(){
 
